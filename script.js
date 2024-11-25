@@ -11,8 +11,6 @@ function calculateScore() {
             return;
         }
     }
-
-    
     if (totalScore <= 5) {
         location.href = `tips.html?score=${totalScore}#minimal-tips`;
     } else if (totalScore <= 10) {

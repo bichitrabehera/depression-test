@@ -10,7 +10,7 @@ body {
     align-items: center;
     justify-content: center;
     letter-spacing: 1.5px;
-    background-color: #f0f4f8;
+    background-color: #ffffff;
 }
 
 .container {
@@ -19,13 +19,11 @@ body {
     padding: 50px 100px;
     margin-bottom: 40px;
     background-color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
     text-align: center;
 }
 
 .quote {
-    color: #007bff;
+    color: #00b7ff;
     font-size: 25px;
     margin-bottom: 100px;
 }
@@ -70,7 +68,7 @@ button {
     background-color: #007bff;
     color: #fff;
     font-size: 20px;
-    padding: 20px;
+    padding: 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -92,10 +90,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
+    height: 30px;
     width: 100%;
     position: fixed;
     bottom: 0;
+    font-size: 12px;
     background-color: #007bff;
 
 }
@@ -115,8 +114,8 @@ ul {
 .back-button {
     display: flex;
     margin-top: 20px;
-    height:50px;
-    width: 150px;
+    height: 50px;
+    width: 120px;
     background-color: #007bff;
     color: #fff;
     text-decoration: none;
@@ -124,7 +123,10 @@ ul {
     align-items: center;
     border-radius: 5px;
     transition: background-color 0.3s;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 .back-button:hover {
     background-color: #0056b3;
