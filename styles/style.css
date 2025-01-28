@@ -56,11 +56,12 @@ html {
     cursor: pointer;
     padding: 5px;
     margin-right: 20px;
+    color: white;
 }
 
 .close-btn {
     background: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     border: none;
     font-size: 40px;
     position: absolute;
