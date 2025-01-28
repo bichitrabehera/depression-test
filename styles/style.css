@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #f4f4f4;
+    color: #333333;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#mobile-sidebar {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 180px;
+    height: 50%;
+    background-color: #005dc1;
+    color: rgb(255, 255, 255);
+    padding-top: 50px;
+    z-index: 1000;
+    font-weight: 600;
+}
+
+#mobile-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 80px;
+}
+
+#mobile-sidebar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px;
+    display: block;
+    margin-right: 20px;
+}
+
+#mobile-sidebar a:hover {
+    background-color: white;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.close-btn {
+    background: none;
+    color: rgb(0, 0, 0);
+    border: none;
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    #mobile-sidebar.active {
+        display: block;
+    }
+}
+
+
+header {
+    background-color: #005dc1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+section {
+    scroll-margin-top: 70px;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px;
+    margin-right: 30px;
+    font-weight: 600;
+}
+
+
+.nav-links .active {
+    background-color: #005A8D;
+    color: #ffffff;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    background-color: #e5e5e5;
+    color: black;
+    padding: 10px;
+}
+
+#home {
+    background: url("../images/sinitta-leunen-aFXiQMUi2zA-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+#home h1 {
+    margin-top: 80px;
+    padding: 20px;
+    font-size: 2rem;
+    color: #000000;
+}
+
+#home p {
+    padding: 20px;
+    font-size: 1rem;
+    color: #000000;
+}
+
+#home button {
+    padding: 15px 20px;
+    color: #ffffff;
+    border: none;
+    font-size: 1.1rem;
+    background-color: hsl(124, 61%, 33%);
+}
+
+#home button a {
+    text-decoration: none;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+#home button:hover {
+    color: #0079C1;
+    background-color: #005A8D;
+}
+
+#questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+#questions h1 {
+    padding: 30px 20px;
+    padding-bottom: 0;
+    color: #0079C1;
+}
+
+#questions p {
+    padding: 20px;
+    color: #333333;
+}
+
+.motivation {
+    margin: 20px 100px;
+}
+
+#depressionTestForm {
+    width: 500px;
+    min-height: 300px;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 1px 1px 5px #cccccc;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+}
+
+#questions .question {
+    font-size: 1rem;
+    padding: 10px;
+    color: #333333;
+}
+
+#questions .question p {
+    padding: 20px;
+    color: #333333;
+}
+
+#depressionTestForm button {
+    margin: 10px;
+    padding: 15px 20px;
+    font-size: 1rem;
+    background-color: #0079C1;
+    border: none;
+    border-radius: 25px;
+    color: #ffffff;
+}
+
+.question .option {
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    color: #333333;
+}
+
+.question .option:hover {
+    background-color: #0079C1;
+    color: #ffffff;
+}
+
+.question .options {
+    border: 1px solid #0079C1;
+    margin-top: 10px;
+}
+
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactForm {
+    width: 500px;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 5px #cccccc;
+}
+
+.contact-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+#contact h1 {
+    text-align: center;
+    color: #0079C1;
+    padding: 20px;
+}
+
+#contact p {
+    text-align: center;
+    color: #333333;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #0079C1;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+.line {
+    height: 1px;
+    width: 80%;
+    background-color: black;
+    margin: 10px auto;
+}
+
+
+#contactForm button {
+    padding: 10px 15px;
+    background-color: hsl(117, 67%, 46%);
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#contactForm button:hover {
+    background-color: #1993da;
+}
+
+#resultContainer {
+    background-color: white;
+    max-width: 600px;
+    text-align: left;
+    padding: 30px;
+    box-shadow: 1px 1px 5px #cccccc;
+}
+
+#resultContainer p,
+ul li {
+    font-size: 0.9rem;
+}
+
+#resultContainer ul li {
+    list-style: '✔  ';
+}
+
+#result {
+    padding: 10px;
+    max-width: 300px;
+    font-size: 1.3rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+#resources {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resource-h1 {
+    padding: 20px;
+    color: #0079C1;
+}
+
+.resource-p {
+    padding: 30px;
+    color: #333333;
+}
+
+.all-resources {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+    gap: 20px;
+}
+
+.resource {
+    width: 300px;
+    height: 200px;
+    margin: 10px auto;
+    background-color: #0079C1;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.resource h3 a {
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+.resource p {
+    font-size: 0.9rem;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.resource button {
+    margin-left: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px;
+    background-color: #4aff40;
+    border: none;
+    color: black;
+}
+
+.resource button:hover {
+    background-color: #2998ff;
+    border: none;
+}
+
+.resource button a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.container ul li {
+    margin-bottom: 15px;
+}
+
+.container ul li a {
+    text-decoration: none;
+    color: #0079C1;
+    font-weight: bold;
+}
+
+.container ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #0079C1;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+footer p {
+    padding: 10px 300px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        color: #ffffff;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    #home {
+        background: url('../images/phone.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 90vh;
+        display: flex;
+        height: 90vh;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #home h1 {
+        font-size: 1.5rem;
+        color: #ffffff;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #home p {
+        font-size: 1rem;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    #home button {
+        padding: 15px 20px;
+        color: #ffffff;
+        border: none;
+        font-size: 1.1rem;
+        background-color: hsl(124, 61%, 33%);
+        margin-top: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #home button:hover {
+        background-color: #005A8D;
+    }
+
+    .motivation {
+        padding: 0;
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    #resources {
+        max-width: auto;
+    }
+
+    .all-resources {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        max-width: auto;
+    }
+
+    .resource {
+        max-width: 280px;
+    }
+
+    .resource-p {
+        font-size: 0.9rem;
+        padding: 20px;
+        margin: 0;
+    }
+
+    #depressionTestForm {
+        max-width: 300px;
+    }
+
+    #contactForm {
+        max-width: 300px;
+    }
+
+    footer p {
+        padding: 20px;
+    }
+}

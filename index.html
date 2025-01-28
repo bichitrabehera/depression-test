@@ -4,173 +4,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Depression Self-Assessment</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Mind Check</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <h1>Depression Self-Assessment</h1>
+    <header>
+        <div class="logo">
+            <h4>MIND CHECK</h4>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#questions">Services</a></li>
+                <li><a href="#resources">Resources</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Mobile menu icon -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span>&#9776;</span>
+        </div>
+    </header>
 
+    <aside id="mobile-sidebar">
+        <button class="close-btn" onclick="closeMenu()">×</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#questions">Services</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </aside>
 
-        <label class="quote">"Even the darkest night will end, and the sun will rise. Hold on, because tomorrow is a
-            new day."</label><br><br>
+    <section id="home">
+        <h1>
+            Find Clarity in How You Feel
+        </h1>
+        <p>
+            Feeling down? Take our short test to understand your mood better. It’s free, quick, and private.
+        </p>
+        <button><a href="#questions">Begin the Test</a></button>
+    </section>
+
+    <section id="questions">
+        <h1>Take a Moment for Yourself</h1>
+        <p>Answer honestly to gain insights into your current mood and emotions</p>
         <form id="depressionTestForm">
-            <div class="question">
+            <div class="question" id="q1">
                 <p>1. How often have you had little interest or pleasure in doing things?</p>
-                <label><input type="radio" name="q1" value="0"> Not at all</label>
-                <label><input type="radio" name="q1" value="1"> Several days</label>
-                <label><input type="radio" name="q1" value="2"> More than half the days</label>
-                <label><input type="radio" name="q1" value="3"> Nearly every day</label>
+                <div class="options">
+                    <div class="option" onclick="selectAnswer(0, 2)">Not at all</div>
+                    <div class="option" onclick="selectAnswer(1, 2)">Several days</div>
+                    <div class="option" onclick="selectAnswer(2, 2)">More than half the days</div>
+                    <div class="option" onclick="selectAnswer(3, 2)">Nearly every day</div>
+                </div>
             </div>
-            <div class="question">
+
+            <div class="question" id="q2" style="display: none;">
                 <p>2. How often have you felt down, depressed, or hopeless?</p>
-                <label><input type="radio" name="q2" value="0"> Not at all</label>
-                <label><input type="radio" name="q2" value="1"> Several days</label>
-                <label><input type="radio" name="q2" value="2"> More than half the days</label>
-                <label><input type="radio" name="q2" value="3"> Nearly every day</label>
-            </div>
-            <div class="question">
-                <label>3. How often have you felt fatigued or had little energy?</label>
                 <div class="options">
-                    <label><input type="radio" name="q3" value="0"> Not at all</label>
-                    <label><input type="radio" name="q3" value="1"> Several days</label>
-                    <label><input type="radio" name="q3" value="2"> More than half the days</label>
-                    <label><input type="radio" name="q3" value="3"> Nearly every day</label>
+                    <div class="option" onclick="selectAnswer(0, 3)">Not at all</div>
+                    <div class="option" onclick="selectAnswer(1, 3)">Several days</div>
+                    <div class="option" onclick="selectAnswer(2, 3)">More than half the days</div>
+                    <div class="option" onclick="selectAnswer(3, 3)">Nearly every day</div>
                 </div>
             </div>
 
-            <div class="question">
-                <label>4. How often have you had trouble falling asleep, staying asleep, or sleeping too much?</label>
+            <div class="question" id="q3" style="display: none;">
+                <p>3. How often have you felt fatigued or had little energy?</p>
                 <div class="options">
-                    <label><input type="radio" name="q4" value="0"> Not at all</label>
-                    <label><input type="radio" name="q4" value="1"> Several days</label>
-                    <label><input type="radio" name="q4" value="2"> More than half the days</label>
-                    <label><input type="radio" name="q4" value="3"> Nearly every day</label>
+                    <div class="option" onclick="selectAnswer(0, 4)">Not at all</div>
+                    <div class="option" onclick="selectAnswer(1, 4)">Several days</div>
+                    <div class="option" onclick="selectAnswer(2, 4)">More than half the days</div>
+                    <div class="option" onclick="selectAnswer(3, 4)">Nearly every day</div>
                 </div>
             </div>
 
-            <div class="question">
-                <label>5. How often have you felt bad about yourself, or felt like a failure?</label>
+            <div class="question" id="q4" style="display: none;">
+                <p>4. How often have you had trouble falling asleep, staying asleep, or sleeping too much?</p>
                 <div class="options">
-                    <label><input type="radio" name="q5" value="0"> Not at all</label>
-                    <label><input type="radio" name="q5" value="1"> Several days</label>
-                    <label><input type="radio" name="q5" value="2"> More than half the days</label>
-                    <label><input type="radio" name="q5" value="3"> Nearly every day</label>
+                    <div class="option" onclick="selectAnswer(0, 5)">Not at all</div>
+                    <div class="option" onclick="selectAnswer(1, 5)">Several days</div>
+                    <div class="option" onclick="selectAnswer(2, 5)">More than half the days</div>
+                    <div class="option" onclick="selectAnswer(3, 5)">Nearly every day</div>
                 </div>
             </div>
 
-            <div class="question">
-                <label>6. How often have you had difficulty concentrating on tasks, such as reading or watching
-                    TV?</label>
+            <div class="question" id="q5" style="display: none;">
+                <p>5. How often have you felt bad about yourself, or felt like a failure?</p>
                 <div class="options">
-                    <label><input type="radio" name="q6" value="0"> Not at all</label>
-                    <label><input type="radio" name="q6" value="1"> Several days</label>
-                    <label><input type="radio" name="q6" value="2"> More than half the days</label>
-                    <label><input type="radio" name="q6" value="3"> Nearly every day</label>
+                    <div class="option" onclick="selectAnswer(0, 6)">Not at all</div>
+                    <div class="option" onclick="selectAnswer(1, 6)">Several days</div>
+                    <div class="option" onclick="selectAnswer(2, 6)">More than half the days</div>
+                    <div class="option" onclick="selectAnswer(3, 6)">Nearly every day</div>
                 </div>
             </div>
 
-            <div class="question">
-                <label>7. How often have you felt slowed down or overly restless?</label>
+            <div class="question" id="q6" style="display: none;">
+                <p>6. How often have you had difficulty concentrating on tasks, such as reading or watching TV?</p>
                 <div class="options">
-                    <label><input type="radio" name="q7" value="0"> Not at all</label>
-                    <label><input type="radio" name="q7" value="1"> Several days</label>
-                    <label><input type="radio" name="q7" value="2"> More than half the days</label>
-                    <label><input type="radio" name="q7" value="3"> Nearly every day</label>
+                    <div class="option" onclick="selectAnswer(0, 7)">Not at all</div>
+                    <div class="option" onclick="selectAnswer(1, 7)">Several days</div>
+                    <div class="option" onclick="selectAnswer(2, 7)">More than half the days</div>
+                    <div class="option" onclick="selectAnswer(3, 7)">Nearly every day</div>
                 </div>
             </div>
 
-            <div class="question">
-                <label>8. How often have you felt disconnected or detached from others?</label>
+            <div class="question" id="q7" style="display: none;">
+                <p>7. How often have you felt slowed down or overly restless?</p>
+                <div class="option" onclick="selectAnswer(0, 8)">Not at all</div>
+                <div class="option" onclick="selectAnswer(1, 8)">Several days</div>
+                <div class="option" onclick="selectAnswer(2, 8)">More than half the days</div>
+                <div class="option" onclick="selectAnswer(3, 8)">Nearly every day</div>
+            </div>
+
+            <div class="question" id="q8" style="display: none;">
+                <p>8. How often have you felt disconnected or detached from others?</p>
                 <div class="options">
-                    <label><input type="radio" name="q8" value="0"> Not at all</label>
-                    <label><input type="radio" name="q8" value="1"> Several days</label>
-                    <label><input type="radio" name="q8" value="2"> More than half the days</label>
-                    <label><input type="radio" name="q8" value="3"> Nearly every day</label>
+                    <div class="option" onclick="selectAnswer(0, 9)">Not at all</div>
+                    <div class="option" onclick="selectAnswer(1, 9)">Several days</div>
+                    <div class="option" onclick="selectAnswer(2, 9)">More than half the days</div>
+                    <div class="option" onclick="selectAnswer(3, 9)">Nearly every day</div>
                 </div>
             </div>
 
-            <div class="question">
-                <label>9. How often have you experienced changes in appetite or weight?</label>
+            <div class="question" id="q9" style="display: none;">
+                <p>9. How often have you experienced changes in appetite or weight?</p>
                 <div class="options">
-                    <label><input type="radio" name="q9" value="0"> Not at all</label>
-                    <label><input type="radio" name="q9" value="1"> Several days</label>
-                    <label><input type="radio" name="q9" value="2"> More than half the days</label>
-                    <label><input type="radio" name="q9" value="3"> Nearly every day</label>
+                    <div class="option" onclick="selectAnswer(0, 10)">Not at all</div>
+                    <div class="option" onclick="selectAnswer(1, 10)">Several days</div>
+                    <div class="option" onclick="selectAnswer(2, 10)">More than half the days</div>
+                    <div class="option" onclick="selectAnswer(3, 10)">Nearly every day</div>
                 </div>
             </div>
+            <div class="question" id="q10" style="display: none;">
+                <p>10. How often have you felt nervous, anxious, or on edge?</p>
 
-            <div class="question">
-                <label>10. How often have you felt nervous, anxious, or on edge?</label>
-                <div class="options">
-                    <label><input type="radio" name="q10" value="0"> Not at all</label>
-                    <label><input type="radio" name="q10" value="1"> Several days</label>
-                    <label><input type="radio" name="q10" value="2"> More than half the days</label>
-                    <label><input type="radio" name="q10" value="3"> Nearly every day</label>
-                </div>
+                <div class="option" onclick="selectAnswer(0, 'submit')">Not at all</div>
+                <div class="option" onclick="selectAnswer(1, 'submit')">Several days</div>
+                <div class="option" onclick="selectAnswer(2, 'submit')">More than half the days</div>
+                <div class="option" onclick="selectAnswer(3, 'submit')">Nearly every day</div>
             </div>
-
-            <div class="question">
-                <label>11. How often have you felt worthless or excessively guilty?</label>
-                <div class="options">
-                    <label><input type="radio" name="q11" value="0"> Not at all</label>
-                    <label><input type="radio" name="q11" value="1"> Several days</label>
-                    <label><input type="radio" name="q11" value="2"> More than half the days</label>
-                    <label><input type="radio" name="q11" value="3"> Nearly every day</label>
-                </div>
             </div>
-
-            <div class="question">
-                <label>12. How often have you experienced difficulty in maintaining relationships with family or
-                    friends?</label>
-                <div class="options">
-                    <label><input type="radio" name="q12" value="0"> Not at all</label>
-                    <label><input type="radio" name="q12" value="1"> Several days</label>
-                    <label><input type="radio" name="q12" value="2"> More than half the days</label>
-                    <label><input type="radio" name="q12" value="3"> Nearly every day</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <label>13. How often have you felt anger or irritability, even with minor triggers?</label>
-                <div class="options">
-                    <label><input type="radio" name="q13" value="0"> Not at all</label>
-                    <label><input type="radio" name="q13" value="1"> Several days</label>
-                    <label><input type="radio" name="q13" value="2"> More than half the days</label>
-                    <label><input type="radio" name="q13" value="3"> Nearly every day</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <label>14. How often have you felt physically unwell, such as with headaches or stomachaches, without a
-                    clear cause?</label>
-                <div class="options">
-                    <label><input type="radio" name="q14" value="0"> Not at all</label>
-                    <label><input type="radio" name="q14" value="1"> Several days</label>
-                    <label><input type="radio" name="q14" value="2"> More than half the days</label>
-                    <label><input type="radio" name="q14" value="3"> Nearly every day</label>
-                </div>
-            </div>
-
-            <div class="question">
-                <label>15. How often have you had thoughts of self-harm or harming others?</label>
-                <div class="options">
-                    <label><input type="radio" name="q15" value="0"> Not at all</label>
-                    <label><input type="radio" name="q15" value="1"> Several days</label>
-                    <label><input type="radio" name="q15" value="2"> More than half the days</label>
-                    <label><input type="radio" name="q15" value="3"> Nearly every day</label>
-                </div>
-            </div>
-            <button type="button" onclick="calculateScore()">Submit</button>
         </form>
 
-    </div>
+        <div id="result">
+
+        </div>
+
+        <div id="resultContainer" style="display: none;">
+
+        </div>
+
+        <p class="motivation">Your mental health matters just as much as your physical health. It's okay to feel
+            uncertain or overwhelmed, and seeking support shows strength. We're here to help and guide you every step of
+            the way. You don’t have to face challenges alone – together, we’ll navigate them.</p>
+
+    </section>
+
+    <div class="line"></div>
+
+    <section id="resources">
+        <h1 class="resource-h1">Mental Health Resources</h1>
+        <p class="resource-p">Your mental health matters. Below are trusted organizations and platforms offering
+            valuable information,
+            support, and guidance. <br> Whether you’re looking to learn more about mental health, find a therapist, or
+            need
+            urgent help, these resources can guide you.</p>
+
+        <div class="all-resources">
+            <div class="resource">
+                <h3><a href="https://www.who.int" target="_blank">World Health Organization</a></h3>
+                <p>The WHO provides comprehensive guides and information on mental health, including tips for coping
+                    with depression and strategies to maintain mental well-being globally.</p>
+                <button><a href="https://www.who.int" target="_blank">Go to Website</a></button>
+            </div>
+            <div class="resource">
+                <h3><a href="https://mhanational.org" target="_blank">Mental Health America (MHA)</a></h3>
+                <p>Explore tools, articles, and self-assessments for understanding mental health better. MHA is a
+                    community-focused platform offering resources for prevention, early intervention, and recovery.</p>
+                <button><a href="https://mhanational.org" target="_blank">Go to Website</a></button>
+            </div>
+            <div class="resource">
+                <h3><a href="https://988lifeline.org" target="_blank">988 Suicide & Crisis Lifeline</a></h3>
+                <p>Need help now? The 988 Lifeline offers free and confidential support for anyone in distress. Call or
+                    chat online 24/7 to connect with trained counselors.</p>
+                <button><a href="https://988lifeline.org" target="_blank">Go to Website</a></button>
+            </div>
+            <div class="resource">
+                <h3><a href="https://www.psychologytoday.com" target="_blank">Psychology Today</a></h3>
+                <p>A go-to directory for finding therapists, psychiatrists, and mental health professionals near you.
+                    They also feature insightful articles on mental health topics.</p>
+                <button><a href="https://www.psychologytoday.com" target="_blank">Go to Website</a></button>
+            </div>
+            <div class="resource">
+                <h3><a href="https://www.verywellmind.com" target="_blank">Verywell Mind</a></h3>
+                <p>Verywell Mind provides easy-to-understand articles and tips to improve mental health and wellness.
+                    It’s an excellent resource for practical, everyday advice.</p>
+                <button><a href="https://www.verywellmind.com" target="_blank">Go to Website</a></button>
+            </div>
+        </div>
+    </section>
+
+    <div class="line"></div>
+
+    <section id="contact">
+
+        <h1>Contact Us</h1>
+        <p>Have any questions or feedback? Reach out to us, and we'll get back to you as soon as possible.</p>
+
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone" placeholder="+91 999-888-7771">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
     <footer>
-        <p>&copy Copyright - All rights Reserved .</p>
+        <p>Mind Check is committed to supporting mental health through accessible tools and resources. We provide
+            self-assessments, valuable resources, and guidance to help you take charge of your mental well-being.</p>
+        <div class="line"></div>
+        <p>&copy 2025 MIND CHECK . Made by <a href="https://portfolio-bichitra.vercel.app/" target="_blank">Bichitra Behera</a></p>
     </footer>
 
-    <script src="script.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
