@@ -131,7 +131,7 @@ section {
 
 .nav-links a:hover {
     color: #ffffff;
-    background-color: #e5e5e5;
+    background-color: #4aff40;
     color: black;
     padding: 10px;
 }
@@ -370,7 +370,7 @@ ul li {
 .resource-p {
     display: flex;
     align-items: center;
-    padding: 30px;
+    padding: 20px 70px;
     color: #333333;
 }
 
@@ -548,6 +548,10 @@ footer a {
         font-size: 0.9rem;
         padding: 20px;
         margin: 0;
+    }
+
+    #contactForm{
+        background-color: #f4f4f4;
     }
 
     #depressionTestForm {
