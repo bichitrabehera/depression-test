@@ -368,6 +368,8 @@ ul li {
 }
 
 .resource-p {
+    display: flex;
+    align-items: center;
     padding: 30px;
     color: #333333;
 }
@@ -380,7 +382,7 @@ ul li {
 }
 
 .resource {
-    width: 300px;
+    width: 280px;
     height: 200px;
     margin: 10px auto;
     background-color: #0079C1;
@@ -451,11 +453,12 @@ footer {
     padding: 15px 0;
     font-size: 0.9rem;
     font-weight: 500;
+    width: 100%;
     color: #ffffff;
 }
 
 footer p {
-    padding: 10px 300px;
+    padding: 10px 30px
 }
 
 footer a {
