@@ -352,6 +352,11 @@ textarea {
     font-weight: 600;
 }
 
+#find-a-therapist a{
+    text-decoration: none;
+    color: white;
+}
+
 #find-a-therapist button:hover {
     color: #000000;
     background-color: #00427b;
