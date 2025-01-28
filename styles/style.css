@@ -6,9 +6,10 @@
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Open Sans" ,sans-serif;
     background-color: #f4f4f4;
     color: #333333;
+    letter-spacing: 1px;
 }
 
 html {
@@ -88,7 +89,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 15px;
     top: 0;
     position: fixed;
     width: 100%;
@@ -197,8 +198,11 @@ section {
     color: #333333;
 }
 
-.motivation {
-    margin: 20px 100px;
+
+.disclaimer{
+    margin-bottom: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
 }
 
 #depressionTestForm {
@@ -311,10 +315,47 @@ textarea {
 .line {
     height: 1px;
     width: 80%;
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     margin: 10px auto;
 }
 
+#motivation{
+    background-color: #d9ebff;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#find-a-therapist{
+    background-color: #d9ebff;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#find-a-therapist h3{
+    padding: 20px;
+}
+
+#find-a-therapist button {
+    padding: 15px 20px;
+    color: #ffffff;
+    border: none;
+    font-size: 1.1rem;
+    background-color: hsl(124, 61%, 33%);
+    font-weight: 600;
+}
+
+#find-a-therapist button:hover {
+    color: #000000;
+    background-color: #00427b;
+}
 
 #contactForm button {
     padding: 10px 15px;
@@ -339,12 +380,17 @@ textarea {
     box-shadow: 1px 1px 5px #f6f6f6;
 }
 
+#resultContainer h4{
+    padding-left: 20px;
+}
+
 #resultContainer p,
 ul li {
     font-size: 0.9rem;
 }
 
-#resultContainer ul li {
+#resultContainer ul {
+    padding-left: 30px;
     list-style: '✔  ';
 }
 
@@ -383,7 +429,7 @@ ul li {
 
 .resource {
     width: 280px;
-    height: 200px;
+    height: 220px;
     margin: 10px auto;
     background-color: #0079C1;
     padding: 20px;
@@ -441,6 +487,32 @@ ul li {
 
 .container ul li a:hover {
     text-decoration: underline;
+}
+
+#therapist-section{
+    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#therapist-section select{
+    padding: 10px;
+    width: 200px;
+    margin: 10px;
+    border: 0.5px solid rgb(0, 174, 255);
+}
+
+#therapist-section button{
+    margin: 10px;
+    padding: 10px;
+    background-color: #4aff40;
+    border: none;
+}
+
+#therapist-section h1{
+    font-size: 50px;
 }
 
 footer {
@@ -523,9 +595,9 @@ footer a {
         background-color: #005A8D;
     }
 
-    .motivation {
-        padding: 0;
+    .motivation{
         font-size: 0.9rem;
+        padding: 0;
         margin: 0;
     }
 

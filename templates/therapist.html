@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetterDays</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places" async defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h4>BetterDays</h4>
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Services</a></li>
+                <li><a href="index.html">Resources</a></li>
+                <li><a href="index.html">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Mobile menu icon -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span>&#9776;</span>
+        </div>
+    </header>
+
+    <aside id="mobile-sidebar">
+        <button class="close-btn" onclick="closeMenu()">×</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#questions">Services</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <section id="therapist-section">
+
+            
+            <h2>Find a Therapist</h2>
+
+            <h1>Coming soon....</h1>
+
+            <!-- Dropdowns for selecting location -->
+            <!-- <select id="continent" onchange="populateCountries()">
+                <option value="">Select Continent</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="North America">North America</option>
+                <option value="South America">South America</option>
+                <option value="Africa">Africa</option>
+                <option value="Australia">Australia</option>
+            </select>
+
+            <select id="country" onchange="populateStates()">
+                <option value="">Select Country</option>
+                <option value="India">India</option>
+                <!-- Countries will be populated here -->
+            <!-- </select>
+
+            <select id="state" onchange="populateCities()">
+                <option value="">Select State</option>
+                <option value="Karnataka">Karnataka</option>
+                <!-- States will be populated here -->
+            <!-- </select> -->
+<!-- 
+            <select id="city">
+                <option value="">Select City</option>
+                <option value="Bangalore">Bangalore</option> -->
+                <!-- Cities will be populated here -->
+            <!-- </select> -->
+
+            <!-- <button onclick="showTherapists()">Show Therapists</button> -->
+
+
+
+            
+
+            <!-- Map and Therapist List -->
+            <!-- <div id="map" style="height: 400px; width: 100%;"></div>
+            <div id="therapistsList"> -->
+                <!-- Therapists will be listed here -->
+            </div> 
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

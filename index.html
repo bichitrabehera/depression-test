@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mind Check</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>BetterDays</title>
+    <link rel="stylesheet" href="../styles/style.css">
 </head>
 
 <body>
     <header>
         <div class="logo">
-            <h4>MIND CHECK</h4>
+            <h4>BetterDays</h4>
         </div>
         <div class="nav-links">
             <ul>
@@ -46,10 +46,11 @@
         </p>
         <button><a href="#questions">Begin the Test</a></button>
     </section>
-
+    <hr>
     <section id="questions">
         <h1>Take a Moment for Yourself</h1>
         <p>Answer honestly to gain insights into your current mood and emotions</p>
+        
         <form id="depressionTestForm">
             <div class="question" id="q1">
                 <p>1. How often have you had little interest or pleasure in doing things?</p>
@@ -152,15 +153,18 @@
         </form>
 
         <div id="result"></div>
-        <div id="resultContainer" style="display: none;"></div>
-        <p class="motivation">Your mental health matters just as much as your physical health. It's okay to feel
-            uncertain or overwhelmed, and seeking support shows strength. We're here to help and guide you every step of
-            the way. You don’t have to face challenges alone – together, we’ll navigate them.</p>
-
+        <div id="resultContainer" style="display: none;">
+            <p class="disclaimer">Disclaimer: This test is not a substitute for professional diagnosis. If you’re experiencing distress, please
+                consult a licensed mental health professional.</p>
+        </div>
     </section>
-
-    <div class="line"></div>
-
+    <hr>
+    <section id="find-a-therapist">
+        <h3>Looking for a Therapist?
+        </h3>
+        <button><a href="templates/therapist.html">Find Here</a></button>
+    </section>
+    <hr>
     <section id="resources">
         <h1 class="resource-h1">Mental Health Resources</h1>
         <p class="resource-p">Your mental health matters. Below are trusted organizations and platforms offering
@@ -177,7 +181,7 @@
                 <button><a href="https://www.who.int" target="_blank">Go to Website</a></button>
             </div>
             <div class="resource">
-                <h3><a href="https://mhanational.org" target="_blank">Mental Health America (MHA)</a></h3>
+                <h3><a href="https://mhanational.org" target="_blank">Mental HealBetterDays</a></h3>
                 <p>Explore tools, articles, and self-assessments for understanding mental health better. MHA is a
                     community-focused platform offering resources for prevention, early intervention, and recovery.</p>
                 <button><a href="https://mhanational.org" target="_blank">Go to Website</a></button>
@@ -202,9 +206,13 @@
             </div>
         </div>
     </section>
-
-    <div class="line"></div>
-
+    <hr>
+    <section id="motivation">
+        <p class="motivation">Your mental health matters just as much as your physical health. It's okay to feel
+            uncertain or overwhelmed, and seeking support shows strength. We're here to help and guide you every step of
+            the way. You don’t have to face challenges alone – together, we’ll navigate them.</p>
+    </section>
+    <hr>
     <section id="contact">
 
         <h1>Contact Us</h1>
@@ -232,15 +240,15 @@
     </section>
 
     <footer>
-        <p>Mind Check is committed to supporting mental health through accessible tools and resources. We provide
+        <p>BetterDays is committed to supporting mental health through accessible tools and resources. We provide
             self-assessments, valuable resources, and guidance to help you take charge of your mental well-being.</p>
         <div class="line"></div>
-        <p>&copy 2025 MIND CHECK . Made by <a href="https://portfolio-bichitra.vercel.app/" target="_blank">Bichitra
+        <p>&copy 2025 BetterDays . Made by <a href="https://portfolio-bichitra.vercel.app/" target="_blank">Bichitra
                 Behera</a></p>
     </footer>
 
 
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
