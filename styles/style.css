@@ -21,7 +21,7 @@ html {
     top: 0;
     right: 0;
     width: 180px;
-    height: 50%;
+    height: 100%;
     background-color: #005dc1;
     color: rgb(255, 255, 255);
     padding-top: 50px;
@@ -101,7 +101,7 @@ section {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 21px;
     color: #ffffff;
 }
 
@@ -331,11 +331,12 @@ textarea {
 }
 
 #resultContainer {
+    margin: 20px;
     background-color: white;
     max-width: 600px;
     text-align: left;
     padding: 30px;
-    box-shadow: 1px 1px 5px #cccccc;
+    box-shadow: 1px 1px 5px #f6f6f6;
 }
 
 #resultContainer p,
