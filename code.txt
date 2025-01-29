@@ -1,0 +1,7 @@
+<h2>Find a Therapist</h2>
+            <input type="text" name="place" id="place" placeholder="Enter Your Loaction">
+            <button onclick="displayplaces()">Search</button>
+
+            <p id="ptag">
+
+            </p>

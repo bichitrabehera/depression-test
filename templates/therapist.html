@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BetterDays</title>
     <link rel="stylesheet" href="../styles/style.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places" async defer></script>
+    <link rel="stylesheet" href="../styles/map.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -35,58 +37,42 @@
             <li><a href="../index.html">Contact</a></li>
         </ul>
     </aside>
+    
+    <hr>
+    <section id="motivation-therapist">
+        <p class="motivation">Taking the first step towards better mental health is incredibly important, and finding
+            the right support is key .
 
-    <main>
-        <section id="therapist-section">
+            Your mental health matters, and finding the right therapist can make all the difference.</p>
+    </section>
+    <hr>
+    <section id="therapist-section">
+        <h2>Find a Therapist</h2>
+        <p>Use the tool below to search for qualified therapists near you.</p>
+        <div class="search">
+            <input type="text" name="place" id="place" placeholder="Enter Your Location">
+            <button onclick="searchTherapists()">Search</button>
+        </div>
 
-            
-            <h2>Find a Therapist</h2>
-
-            <h1>Coming soon....</h1>
-
-            <!-- Dropdowns for selecting location -->
-            <!-- <select id="continent" onchange="populateCountries()">
-                <option value="">Select Continent</option>
-                <option value="Asia">Asia</option>
-                <option value="Europe">Europe</option>
-                <option value="North America">North America</option>
-                <option value="South America">South America</option>
-                <option value="Africa">Africa</option>
-                <option value="Australia">Australia</option>
-            </select>
-
-            <select id="country" onchange="populateStates()">
-                <option value="">Select Country</option>
-                <option value="India">India</option>
-                <!-- Countries will be populated here -->
-            <!-- </select>
-
-            <select id="state" onchange="populateCities()">
-                <option value="">Select State</option>
-                <option value="Karnataka">Karnataka</option>
-                <!-- States will be populated here -->
-            <!-- </select> -->
-<!-- 
-            <select id="city">
-                <option value="">Select City</option>
-                <option value="Bangalore">Bangalore</option> -->
-                <!-- Cities will be populated here -->
-            <!-- </select> -->
-
-            <!-- <button onclick="showTherapists()">Show Therapists</button> -->
+        <div id="map"></div>
+    </section>
 
 
+    <footer>
+        <p>BetterDays is committed to supporting mental health through accessible tools and resources. We provide
+            self-assessments, valuable resources, and guidance to help you take charge of your mental well-being.</p>
+        <div class="line"></div>
+        <p>&copy 2025 BetterDays . Made by <a href="https://portfolio-bichitra.vercel.app/" target="_blank">Bichitra
+                Behera</a></p>
+    </footer>
 
-            
-
-            <!-- Map and Therapist List -->
-            <!-- <div id="map" style="height: 400px; width: 100%;"></div>
-            <div id="therapistsList"> -->
-                <!-- Therapists will be listed here -->
-            </div> 
-        </section>
-    </main>
 
     <script src="../js/script.js"></script>
+    <script src="../js/map.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBt2ACihZMzs1i-YVjlqcSwpraecbxAGvE&libraries=places&callback=initMap"
+        async defer></script>
+
 </body>
+
 </html>
