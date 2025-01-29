@@ -10,6 +10,7 @@ body {
     background-color: #f4f4f4;
     color: #333333;
     letter-spacing: 1px;
+    overflow: scroll;
 }
 
 html {
@@ -91,6 +92,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
+    height: 30px;
     top: 0;
     position: fixed;
     width: 100%;
