@@ -315,8 +315,8 @@ textarea {
 }
 
 .line {
-    height: 1px;
-    width: 80%;
+    height: 0.5px;
+    width: 60%;
     background-color: rgb(255, 255, 255);
     margin: 10px auto;
 }
@@ -561,6 +561,10 @@ footer a {
     font-weight: 600;
 }
 
+.desc-phone{
+    display: none;
+}
+
 @media (max-width: 768px) {
     * {
         margin: 0;
@@ -657,6 +661,12 @@ footer a {
     }
 
     footer p {
-        padding: 30px;
+        padding: 10px 20px;
+    }
+    .desc-phone{
+        display: block;
+    }
+    .desc-web{
+        display: none;
     }
 }
