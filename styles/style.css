@@ -9,8 +9,7 @@ body {
     font-family: "Open Sans", sans-serif;
     background-color: #f4f4f4;
     color: #333333;
-    letter-spacing: 1px;
-    overflow: scroll;
+    letter-spacing: 0.5px;
 }
 
 html {
@@ -330,6 +329,7 @@ textarea {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
 #find-a-therapist {
@@ -425,11 +425,15 @@ ul li {
     display: flex;
     align-items: center;
     padding: 20px 70px;
+    font-size: 0.9rem;
     color: #333333;
+    text-align: center;
 }
 
 .all-resources {
     max-width: 1200px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
     gap: 20px;
@@ -442,6 +446,12 @@ ul li {
     background-color: #0079C1;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.resource:hover {
+    transform: translateY(-10px);
+    transition-duration: 1.5s;
 }
 
 .resource h3 a {
@@ -541,7 +551,8 @@ footer {
 }
 
 footer p {
-    padding: 10px 30px
+    padding: 10px 30px;
+    text-align: center;
 }
 
 footer a {
@@ -646,6 +657,6 @@ footer a {
     }
 
     footer p {
-        padding: 20px;
+        padding: 30px;
     }
 }
